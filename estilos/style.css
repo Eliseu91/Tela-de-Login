@@ -32,23 +32,110 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: #7af3ff;
-    width: 250px;
-    height: 500px;
+    width: 300px;
+    height: 600px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.165);
+
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
 }
 
 section#login > div#img { 
     background: #d3fb53 url(../img/log01.png) no-repeat;
     background-size: cover;
-    background-position: center;
-    height: 300px;
+    background-position: center center;
+    height: 200px;
+    display: block;
 }
 
 section#login > div#form {
     padding: 10px;
+    display: block;
+}
+
+section#login > div#form > h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+section#login > div#form > p {
+    text-align:center;
+    padding: 10px;    
+}
+
+form > input[type=submit] {
+    display:block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #d3fb53;
+    border: none;
+    border-radius: 5px;
+}
+
+form > input[type=submit]:hover {
+    background-color: #9fbc3c;
+    transition: .3s;
+    cursor: pointer;
+}
+
+form>div.campo > label {
+    display: none;
+}
+
+form > div.campo >span {
+    font-size: 1.6em;
+    color:#d3fb53;
+    padding: 5px;
+}
+
+div.campo > input {
+    border: none;
+    background-color: rgb(217, 246, 248);
+    font-size: 1em;
+    width: calc(100% - 40px);
+    height: 100%;
+    border-radius: 5px;
+    padding: 4px;
+    transform: translateY(-5.5px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+}
+
+form > div.campo {
+    background-color: #052326;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0px;
+    border: 2px solid #052326;
+}
+form > a.butt {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #05232662;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #05232675;
+    margin-top: 5px;
+    padding-top: 5px;
+
+}
+form > a.butt:hover{
+    background-color: #0523268c;
+    border: none;
+    color: #7af3ff;
+}
+
+form > a.butt > span {
+    font-size: 0.9em;
 }
